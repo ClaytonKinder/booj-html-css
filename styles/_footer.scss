@@ -1,0 +1,37 @@
+footer {
+  background-color: $lightTeal;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  color: $white;
+
+  .footer-first {
+    .social-icons {
+      margin-top: 25px;
+      display: flex;
+      justify-content: space-between;
+
+      svg {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+
+  .footer-second {
+    a {
+      color: $white;
+      text-decoration: underline;
+      margin-left: 15px;
+    }
+
+    small {
+      display: block;
+      margin-top: 10px;
+      margin-bottom: 15px;
+    }
+
+    svg {
+      margin-left: 15px;
+    }
+  }
+}

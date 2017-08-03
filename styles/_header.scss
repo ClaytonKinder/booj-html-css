@@ -1,0 +1,59 @@
+header {
+  .upper {
+    padding: 10px 40px;
+    .company-logo {
+      width: 328px;
+      height: 76px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+
+      li {
+        display: inline-block;
+      }
+
+      &.upper-links {
+        li {
+          margin-left: 20px;
+          color: $lightTeal;
+        }
+      }
+
+      &.lower-links {
+        margin: 20px 0 0;
+
+        li {
+          margin-left: 40px;
+          a {
+            color: $black;
+          }
+        }
+      }
+    }
+  }
+
+  .lower {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: $mediumGray;
+
+    .search {
+      input {
+        height: 40px;
+      }
+    }
+
+    .nav {
+      div {
+        height: 40px;
+
+        a {
+          color: $white;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
