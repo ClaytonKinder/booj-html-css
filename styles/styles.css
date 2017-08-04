@@ -1,3 +1,6 @@
+html, body {
+  height: 100%; }
+
 .page-padding {
   padding-left: 125px;
   padding-right: 125px; }
@@ -35,6 +38,11 @@ h1 {
 .flex-middle {
   display: flex;
   align-items: center; }
+
+.flex-col-middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
 
 html {
   background-color: pink; }
@@ -80,10 +88,12 @@ header .lower {
       text-decoration: underline; }
 
 main .agent {
-  height: 363px;
+  height: 100%;
+  position: relative;
   background-color: #EEE; }
   main .agent .agent-description {
     height: 100%;
+    margin-top: 7%;
     padding-left: 15px; }
     main .agent .agent-description .flex-middle {
       height: 100%; }
@@ -101,7 +111,8 @@ main .agent {
         height: 100%;
         width: 100%; }
   main .agent .agent-contact {
-    height: 100%; }
+    height: 100%;
+    margin-top: 7%; }
     main .agent .agent-contact .contact-row {
       margin-bottom: 20px; }
       main .agent .agent-contact .contact-row img {
@@ -149,5 +160,26 @@ footer {
     margin-bottom: 15px; }
   footer .footer-second svg {
     margin-left: 15px; }
+
+@media screen and (max-width: 1100px) {
+  .page-padding {
+    padding-left: 75px;
+    padding-right: 75px; }
+
+  header .lower .nav div {
+    justify-content: flex-end; } }
+@media screen and (max-width: 1200px) {
+  header .upper ul.lower-links li {
+    margin-left: 20px; }
+
+  main .agent .agent-description,
+  main .agent .agent-contact {
+    margin-top: 5%; } }
+@media screen and (max-width: 768px) {
+  header .upper .company-logo {
+    max-width: 100%;
+    width: auto; }
+  header .upper ul.lower-links {
+    display: none; } }
 
 /*# sourceMappingURL=styles.css.map */

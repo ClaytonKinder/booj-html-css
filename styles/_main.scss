@@ -1,10 +1,12 @@
 main {
   .agent {
-    height: 363px;
+    height: 100%;
+    position: relative;
     background-color: $lightGray;
 
     .agent-description {
       height: 100%;
+      margin-top: 7%;
       padding-left: 15px;
 
       .flex-middle {
@@ -37,7 +39,7 @@ main {
 
     .agent-contact {
       height: 100%;
-
+      margin-top: 7%;
       .contact-row {
         margin-bottom: 20px;
 

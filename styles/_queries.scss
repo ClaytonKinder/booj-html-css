@@ -1,0 +1,53 @@
+// Medium
+@media screen and (max-width: 1100px) {
+  .page-padding {
+    padding-left: 75px;
+    padding-right: 75px;
+  }
+
+  header {
+    .lower {
+      .nav {
+        div {
+          justify-content: flex-end;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  header {
+    .upper {
+      ul.lower-links {
+        li {
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+
+  main {
+    .agent {
+      .agent-description,
+      .agent-contact {
+        margin-top: 5%;
+      }
+    }
+  }
+}
+
+// Small
+@media screen and (max-width: 768px) {
+  header {
+    .upper {
+      .company-logo {
+        max-width: 100%;
+        width: auto;
+      }
+      ul.lower-links {
+        display: none;
+      }
+    }
+  }
+}
