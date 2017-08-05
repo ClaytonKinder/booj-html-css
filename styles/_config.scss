@@ -13,16 +13,21 @@ $mdFont: 14px;
 $lgFont: 16px;
 $xlgFont: 18px;
 
+// Mixins
+@mixin flexbox($direction: row, $justify: flex-start, $align: flex-start, $wrap: wrap) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $wrap;
+}
+
 // Universal classes
-
-html,body {
-  height: 100%;
-}
-
-.page-padding {
-  padding-left: 125px;
-  padding-right: 125px;
-}
+// .page-padding,
+// .header-padding {
+//   padding-left: 15px;
+//   padding-right: 15px;
+// }
 
 .no-padding {
   padding: 0 !important;
@@ -63,25 +68,10 @@ h1 {
   width: 100%;
 }
 
-.flex-middle {
-  display: flex;
-  align-items: center;
-}
-
-.flex-col-middle {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-// General styling
-html {
-  background-color: pink;
-}
-
 body {
   max-width: 1400px;
   margin: 0 auto;
+  background-color: $white;
 }
 
 a {
@@ -89,4 +79,8 @@ a {
   &:hover {
     text-decoration: none;
   }
+}
+
+img {
+  max-width: 100%;
 }

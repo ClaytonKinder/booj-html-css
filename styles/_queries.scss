@@ -1,53 +1,121 @@
-// Medium
-@media screen and (max-width: 1100px) {
-  .page-padding {
-    padding-left: 75px;
-    padding-right: 75px;
-  }
-
+@media screen and (min-width: 768px) {
   header {
-    .lower {
-      .nav {
-        div {
-          justify-content: flex-end;
+    .upper-header {
+      height: 55px;
+      .left {
+        .logo {
+          display: block;
+        }
+
+        .mobile-logo {
+          display: none;
         }
       }
     }
-  }
-}
 
-@media screen and (max-width: 1200px) {
-  header {
-    .upper {
-      ul.lower-links {
-        li {
-          margin-left: 20px;
-        }
+    .lower-header {
+      .search-mobile {
+        display: none;
+      }
+
+      .search, .links {
+        display: block;
       }
     }
   }
 
   main {
     .agent {
-      .agent-description,
-      .agent-contact {
-        margin-top: 5%;
+      background: linear-gradient(to bottom,  rgba(170,170,170,1) 0%,rgba(238,238,238,1) 2%);
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    .agent {
+      padding-bottom: 0;
+    }
+
+    .content {
+      .content-mobile-nav {
+        display: none;
+      }
+      .content-nav {
+        display: block;
+      }
+    }
+  }
+
+  footer {
+    .footer-first {
+      .phone,
+      .address {
+        text-align: left;
+      }
+    }
+
+    .footer-second {
+      .copyright,
+      .icons {
+        text-align: right;
       }
     }
   }
 }
 
-// Small
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 1100px) {
+  .page-padding {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+
   header {
-    .upper {
-      .company-logo {
-        max-width: 100%;
-        width: auto;
+    .upper-header {
+      height: 100px;
+
+      .left {
+        height: 100%;
+        @include flexbox(row, flex-start, flex-end);
+        .logo {
+          height: 90%;
+        }
       }
-      ul.lower-links {
-        display: none;
+
+      .right {
+        height: 80%;
+        @include flexbox(column, space-between, flex-end);
+
+        .icon-links {
+          .mobile-menu {
+            display: none;
+          }
+        }
+
+        .text-links {
+          @include flexbox(row, space-between, center);
+          width: 100%;
+        }
       }
     }
+  }
+
+  footer {
+    .footer-first {
+      .social-icons {
+        justify-content: flex-start;
+
+        a:not(:last-of-type) {
+          margin-right: 25px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .header-padding {
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }

@@ -1,10 +1,3 @@
-html, body {
-  height: 100%; }
-
-.page-padding {
-  padding-left: 125px;
-  padding-right: 125px; }
-
 .no-padding {
   padding: 0 !important; }
 
@@ -35,151 +28,229 @@ h1 {
 .full-width {
   width: 100%; }
 
-.flex-middle {
-  display: flex;
-  align-items: center; }
-
-.flex-col-middle {
-  display: flex;
-  flex-direction: column;
-  justify-content: center; }
-
-html {
-  background-color: pink; }
-
 body {
   max-width: 1400px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  background-color: #fff; }
 
 a {
   cursor: pointer; }
   a:hover {
     text-decoration: none; }
 
-header .upper {
-  padding: 10px 40px; }
-  header .upper .company-logo {
-    width: 328px;
-    height: 76px; }
-  header .upper ul {
-    list-style-type: none;
-    padding-left: 0; }
-    header .upper ul li {
-      display: inline-block; }
-    header .upper ul.upper-links li {
-      margin-left: 20px;
+img {
+  max-width: 100%; }
+
+header .upper-header {
+  height: 50px;
+  padding-top: 5px;
+  padding-bottom: 5px; }
+  header .upper-header .left .logo {
+    display: none; }
+  header .upper-header .right .icon-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap; }
+    header .upper-header .right .icon-links a {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      flex-wrap: wrap;
       color: #2399A6; }
-    header .upper ul.lower-links {
-      margin: 20px 0 0; }
-      header .upper ul.lower-links li {
-        margin-left: 40px; }
-        header .upper ul.lower-links li a {
-          color: #323232; }
-header .lower {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  background-color: #AAA; }
-  header .lower .search input {
-    height: 40px; }
-  header .lower .nav div {
-    height: 40px; }
-    header .lower .nav div a {
-      color: #fff;
-      text-decoration: underline; }
+      header .upper-header .right .icon-links a:not(:first-of-type) {
+        margin-left: 20px; }
+  header .upper-header .right .text-links {
+    display: none; }
+header .lower-header {
+  height: 60px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background: #AAA; }
+  header .lower-header .search-mobile .input-group-addon {
+    background-color: #2399A6;
+    width: 27%; }
+    header .lower-header .search-mobile .input-group-addon svg {
+      margin: 0 auto;
+      height: 21px;
+      width: 21px; }
+  header .lower-header .search {
+    display: none; }
+    header .lower-header .search input {
+      border-radius: 0;
+      height: 40px; }
+  header .lower-header .links {
+    display: none; }
+    header .lower-header .links .link {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      color: #fff; }
+      header .lower-header .links .link a {
+        text-decoration: underline; }
 
 main .agent {
-  height: 100%;
-  position: relative;
-  background-color: #EEE; }
-  main .agent .agent-description {
-    height: 100%;
-    margin-top: 7%;
-    padding-left: 15px; }
-    main .agent .agent-description .flex-middle {
-      height: 100%; }
-    main .agent .agent-description h1 {
-      margin-top: 0;
-      color: #323232; }
-    main .agent .agent-description small {
+  background-color: #EEE;
+  padding-bottom: 25px; }
+  main .agent .agent-information .agent-wrapper {
+    padding-top: 10px; }
+    main .agent .agent-information .agent-wrapper small {
       color: #BCBCBC; }
-    main .agent .agent-description button {
-      margin: 20px 0; }
-    main .agent .agent-description .social-icons {
+    main .agent .agent-information .agent-wrapper button {
+      margin: 15px 0; }
+    main .agent .agent-information .agent-wrapper .social-icons {
       display: flex;
-      justify-content: space-between; }
-      main .agent .agent-description .social-icons svg {
-        height: 100%;
-        width: 100%; }
-  main .agent .agent-contact {
-    height: 100%;
-    margin-top: 7%; }
-    main .agent .agent-contact .contact-row {
-      margin-bottom: 20px; }
-      main .agent .agent-contact .contact-row img {
-        width: 25px;
-        margin-right: 10px; }
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap; }
+  main .agent .agent-contact .agent-wrapper {
+    padding-top: 25px; }
+    main .agent .agent-contact .agent-wrapper .agent-contact-row {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      color: #2399A6;
+      margin-bottom: 10px; }
+      main .agent .agent-contact .agent-wrapper .agent-contact-row svg {
+        margin-right: 15px; }
 main .content {
-  padding-top: 60px;
-  padding-bottom: 30px; }
-  main .content .content-nav a {
-    display: inline-block;
-    width: 25%;
-    padding-bottom: 10px;
-    color: #AAA;
-    border-bottom: 4px solid #EEE; }
-    main .content .content-nav a.active {
-      border-color: #2399A6;
-      color: #2399A6; }
+  background-color: #fff;
+  padding-top: 25px; }
+  main .content .content-mobile-nav select {
+    font-weight: bolder;
+    color: #2399A6;
+    border-radius: 0;
+    background: url("../Assets/SVGs/angle-down.svg") no-repeat right;
+    background-position-x: 95%;
+    -webkit-appearance: none; }
+  main .content .content-nav {
+    display: none;
+    padding: 30px 0 40px; }
+    main .content .content-nav a {
+      display: inline-block;
+      width: 25%;
+      padding-bottom: 10px;
+      color: #AAA;
+      border-bottom: 4px solid #EEE; }
+      main .content .content-nav a.active, main .content .content-nav a:hover {
+        border-color: #2399A6;
+        color: #2399A6; }
   main .content .content-main {
-    padding-top: 60px;
-    color: #323232; }
-    main .content .content-main article p {
-      line-height: 30px; }
-    main .content .content-main aside div {
-      margin-bottom: 40px; }
+    padding-top: 10px; }
+    main .content .content-main article {
+      line-height: 28px;
+      padding-bottom: 25px; }
+    main .content .content-main aside .aside-section {
+      margin-bottom: 25px; }
 
 footer {
   background-color: #2399A6;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   color: #fff; }
+  footer .footer-first .phone,
+  footer .footer-first .address {
+    text-align: center; }
   footer .footer-first .social-icons {
-    margin-top: 25px;
+    margin: 20px 0;
     display: flex;
-    justify-content: space-between; }
-    footer .footer-first .social-icons svg {
-      height: 100%;
-      width: 100%; }
-  footer .footer-second a {
-    color: #fff;
-    text-decoration: underline;
-    margin-left: 15px; }
-  footer .footer-second small {
-    display: block;
-    margin-top: 10px;
-    margin-bottom: 15px; }
-  footer .footer-second svg {
-    margin-left: 15px; }
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; }
+  footer .footer-second .links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; }
+    footer .footer-second .links a {
+      text-decoration: underline; }
+  footer .footer-second .copyright {
+    text-align: center;
+    margin: 10px 0; }
+  footer .footer-second .icons {
+    text-align: center; }
+    footer .footer-second .icons svg:first-of-type {
+      margin-right: 7.5px; }
+    footer .footer-second .icons svg:last-of-type {
+      margin-left: 7.5px; }
 
-@media screen and (max-width: 1100px) {
+@media screen and (min-width: 768px) {
+  header .upper-header {
+    height: 55px; }
+    header .upper-header .left .logo {
+      display: block; }
+    header .upper-header .left .mobile-logo {
+      display: none; }
+  header .lower-header .search-mobile {
+    display: none; }
+  header .lower-header .search, header .lower-header .links {
+    display: block; }
+
+  main .agent {
+    background: linear-gradient(to bottom, #aaaaaa 0%, #eeeeee 2%); } }
+@media screen and (min-width: 768px) {
+  main .agent {
+    padding-bottom: 0; }
+  main .content .content-mobile-nav {
+    display: none; }
+  main .content .content-nav {
+    display: block; }
+
+  footer .footer-first .phone,
+  footer .footer-first .address {
+    text-align: left; }
+  footer .footer-second .copyright,
+  footer .footer-second .icons {
+    text-align: right; } }
+@media screen and (min-width: 1100px) {
   .page-padding {
-    padding-left: 75px;
-    padding-right: 75px; }
+    padding-left: 80px;
+    padding-right: 80px; }
 
-  header .lower .nav div {
-    justify-content: flex-end; } }
-@media screen and (max-width: 1200px) {
-  header .upper ul.lower-links li {
-    margin-left: 20px; }
+  header .upper-header {
+    height: 100px; }
+    header .upper-header .left {
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-end;
+      flex-wrap: wrap; }
+      header .upper-header .left .logo {
+        height: 90%; }
+    header .upper-header .right {
+      height: 80%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-wrap: wrap; }
+      header .upper-header .right .icon-links .mobile-menu {
+        display: none; }
+      header .upper-header .right .text-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%; }
 
-  main .agent .agent-description,
-  main .agent .agent-contact {
-    margin-top: 5%; } }
-@media screen and (max-width: 768px) {
-  header .upper .company-logo {
-    max-width: 100%;
-    width: auto; }
-  header .upper ul.lower-links {
-    display: none; } }
+  footer .footer-first .social-icons {
+    justify-content: flex-start; }
+    footer .footer-first .social-icons a:not(:last-of-type) {
+      margin-right: 25px; } }
+@media screen and (min-width: 1400px) {
+  .header-padding {
+    padding-left: 40px;
+    padding-right: 40px; } }
 
 /*# sourceMappingURL=styles.css.map */

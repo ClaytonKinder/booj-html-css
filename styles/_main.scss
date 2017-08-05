@@ -1,61 +1,60 @@
 main {
   .agent {
-    height: 100%;
-    position: relative;
     background-color: $lightGray;
+    padding-bottom: 25px;
+    
+    .agent-information {
+      .agent-wrapper {
+        padding-top: 10px;
 
-    .agent-description {
-      height: 100%;
-      margin-top: 7%;
-      padding-left: 15px;
+        small {
+          color: $fontGray;
+        }
 
-      .flex-middle {
-        height: 100%
-      }
+        button {
+          margin: 15px 0;
+        }
 
-      h1 {
-        margin-top: 0;
-        color: $black;
-      }
-
-      small {
-        color: $fontGray;
-      }
-
-      button {
-        margin: 20px 0;
-      }
-
-      .social-icons {
-        display: flex;
-        justify-content: space-between;
-
-        svg {
-          height: 100%;
-          width: 100%;
+        .social-icons {
+          @include flexbox(row, space-between, center, wrap);
         }
       }
     }
 
     .agent-contact {
-      height: 100%;
-      margin-top: 7%;
-      .contact-row {
-        margin-bottom: 20px;
+      .agent-wrapper {
+        padding-top: 25px;
 
-        img {
-          width: 25px;
-          margin-right: 10px;
+        .agent-contact-row {
+          @include flexbox(row, flex-start, flex-end, wrap);
+          color: $lightTeal;
+          margin-bottom: 10px;
+          svg {
+            margin-right: 15px;
+          }
         }
       }
     }
   }
 
   .content {
-    padding-top: 60px;
-    padding-bottom: 30px;
+    background-color: $white;
+    padding-top: 25px;
+
+    .content-mobile-nav {
+      select {
+        font-weight: bolder;
+        color: $lightTeal;
+        border-radius: 0;
+        background: url('../Assets/SVGs/angle-down.svg') no-repeat right;
+        background-position-x: 95%;
+        -webkit-appearance: none;
+      }
+    }
 
     .content-nav {
+      display: none;
+      padding: 30px 0 40px;
       a {
         display: inline-block;
         width: 25%;
@@ -63,7 +62,8 @@ main {
         color: $mediumGray;
         border-bottom: 4px solid $lightGray;
 
-        &.active {
+        &.active,
+        &:hover {
           border-color: $lightTeal;
           color: $lightTeal;
         }
@@ -71,18 +71,16 @@ main {
     }
 
     .content-main {
-      padding-top: 60px;
-      color: $black;
+      padding-top: 10px;
 
       article {
-        p {
-          line-height: 30px;
-        }
+        line-height: 28px;
+        padding-bottom: 25px;
       }
 
       aside {
-        div {
-          margin-bottom: 40px;
+        .aside-section {
+          margin-bottom: 25px;
         }
       }
     }

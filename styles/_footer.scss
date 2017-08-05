@@ -1,37 +1,43 @@
 footer {
   background-color: $lightTeal;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   color: $white;
 
   .footer-first {
+    .phone,
+    .address {
+      text-align: center;
+    }
     .social-icons {
-      margin-top: 25px;
-      display: flex;
-      justify-content: space-between;
-
-      svg {
-        height: 100%;
-        width: 100%;
-      }
+      margin: 20px 0;
+      @include flexbox(row, space-between, center, wrap);
     }
   }
 
   .footer-second {
-    a {
-      color: $white;
-      text-decoration: underline;
-      margin-left: 15px;
+    .links {
+      @include flexbox(row, space-between, center, wrap);
+      a {
+        text-decoration: underline;
+      }
     }
 
-    small {
-      display: block;
-      margin-top: 10px;
-      margin-bottom: 15px;
+    .copyright {
+      text-align: center;
+      margin: 10px 0;
     }
 
-    svg {
-      margin-left: 15px;
+    .icons {
+      text-align: center;
+      svg {
+        &:first-of-type {
+          margin-right: 7.5px;
+        }
+        &:last-of-type {
+          margin-left: 7.5px;
+        }
+      }
     }
   }
 }
