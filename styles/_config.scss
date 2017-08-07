@@ -15,19 +15,24 @@ $xlgFont: 18px;
 
 // Mixins
 @mixin flexbox($direction: row, $justify: flex-start, $align: flex-start, $wrap: wrap) {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: $direction;
-  justify-content: $justify;
-  align-items: $align;
-  flex-wrap: $wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: $direction;
+          flex-direction: $direction;
+  -webkit-box-pack: $justify;
+      -ms-flex-pack: $justify;
+          justify-content: $justify;
+  -webkit-box-align: $align;
+      -ms-flex-align: $align;
+          align-items: $align;
+  -ms-flex-wrap: $wrap;
+      flex-wrap: $wrap;
 }
 
 // Universal classes
-// .page-padding,
-// .header-padding {
-//   padding-left: 15px;
-//   padding-right: 15px;
-// }
 
 .no-padding {
   padding: 0 !important;
